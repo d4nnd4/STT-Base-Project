@@ -1,0 +1,100 @@
+/* Pip-Boy UI Component Styles */
+
+.pip-text {
+  color: var(--pip-green);
+  text-shadow: 0 0 5px var(--pip-shadow);
+}
+
+.pip-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.pip-border {
+  border: 2px solid var(--pip-border);
+  box-shadow: inset 0 0 10px var(--pip-shadow), 0 0 10px var(--pip-shadow);
+}
+
+.pip-panel {
+  background: var(--pip-bg-light);
+  border: 2px solid var(--pip-border);
+  box-shadow: inset 0 0 10px rgba(26, 255, 26, 0.1), 0 0 15px var(--pip-shadow);
+  position: relative;
+}
+
+.pip-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(26, 255, 26, 0.03) 0px,
+    transparent 1px,
+    transparent 2px,
+    rgba(26, 255, 26, 0.03) 3px
+  );
+  pointer-events: none;
+}
+
+.pip-button {
+  background: var(--pip-bg);
+  border: 2px solid var(--pip-border);
+  color: var(--pip-green);
+  padding: 0.5rem 1rem;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.pip-button:hover {
+  background: var(--pip-green-darker);
+  box-shadow: 0 0 15px var(--pip-shadow);
+  text-shadow: 0 0 10px var(--pip-shadow);
+}
+
+.pip-button:active {
+  transform: scale(0.98);
+  box-shadow: inset 0 0 10px var(--pip-shadow);
+}
+
+.pip-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: var(--pip-green-dark);
+}
+
+.pip-input {
+  background: var(--pip-bg);
+  border: 2px solid var(--pip-border);
+  color: var(--pip-green);
+  padding: 0.5rem;
+  font-family: 'Courier New', monospace;
+  width: 100%;
+}
+
+.pip-input:focus {
+  outline: none;
+  box-shadow: 0 0 15px var(--pip-shadow);
+}
+
+/* Terminal/Console styling */
+.terminal-line {
+  font-family: 'Courier New', monospace;
+  margin-bottom: 0.5rem;
+  color: var(--pip-green);
+}
+
+.terminal-line::before {
+  content: '> ';
+  color: var(--pip-green-dark);
+}
+
+/* Pip-Boy Background pattern for panels */
+.pip-bg {
+  background-color: var(--pip-bg);
+}

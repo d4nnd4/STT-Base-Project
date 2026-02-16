@@ -1,0 +1,52 @@
+/* Base styles and CSS variables */
+:root {
+  --pip-green: #1aff1a;
+  --pip-green-dark: #0d7f0d;
+  --pip-green-darker: #063d06;
+  --pip-bg: #0a0e0a;
+  --pip-bg-light: #0f140f;
+  --pip-border: #1aff1a;
+  --pip-shadow: rgba(26, 255, 26, 0.3);
+  
+  font-family: 'Courier New', 'Courier', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color: var(--pip-green);
+  background-color: var(--pip-bg);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--pip-bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--pip-bg);
+  border-left: 1px solid var(--pip-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pip-green-dark);
+  border: 1px solid var(--pip-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--pip-green);
+}
